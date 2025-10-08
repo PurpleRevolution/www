@@ -15,6 +15,31 @@ export default function Home() {
             allowFullScreen
           />
         </div>
+
+        <div className="w-full max-w-3xl mt-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-purple-600 dark:text-purple-400 text-center mb-8">
+            Latest from TikTok
+          </h2>
+          <div className="flex justify-center">
+            <blockquote
+              className="tiktok-embed max-w-[780px] min-w-[288px]"
+              cite="https://www.tiktok.com/@friendlyhoneybadg5"
+              data-unique-id="friendlyhoneybadg5"
+              data-embed-type="creator"
+            >
+              <section>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.tiktok.com/@friendlyhoneybadg5?refer=creator_embed"
+                >
+                  @friendlyhoneybadg5
+                </a>
+              </section>
+            </blockquote>
+            <script async src="https://www.tiktok.com/embed.js"></script>
+          </div>
+        </div>
       </main>
     </div>
   );
