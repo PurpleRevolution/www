@@ -40,6 +40,48 @@ export default function Home() {
             <script async src="https://www.tiktok.com/embed.js"></script>
           </div>
         </div>
+
+        <div className="w-full max-w-3xl mt-12">
+          <div className="flex justify-center">
+            <blockquote
+              className="tiktok-embed max-w-[780px] min-w-[288px]"
+              cite="https://www.tiktok.com/@hunteralexanderhowell"
+              data-unique-id="hunteralexanderhowell"
+              data-embed-type="creator"
+            >
+              <section>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.tiktok.com/@hunteralexanderhowell?refer=creator_embed"
+                >
+                  @hunteralexanderhowell
+                </a>
+              </section>
+            </blockquote>
+          </div>
+        </div>
+
+        <div className="w-full max-w-3xl mt-12">
+          <div className="flex justify-center">
+            <blockquote
+              className="tiktok-embed max-w-[780px] min-w-[288px]"
+              cite="https://www.tiktok.com/@purplerevolution2025"
+              data-unique-id="purplerevolution2025"
+              data-embed-type="creator"
+            >
+              <section>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.tiktok.com/@purplerevolution2025?refer=creator_embed"
+                >
+                  @purplerevolution2025
+                </a>
+              </section>
+            </blockquote>
+          </div>
+        </div>
       </main>
     </div>
   );
