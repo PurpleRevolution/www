@@ -1,7 +1,25 @@
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8 bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <main className="flex flex-col items-center gap-8 max-w-4xl w-full">
+    <div className="flex min-h-screen bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800">
+      {/* Left Sidebar */}
+      <aside className="w-64 p-6 bg-purple-100 dark:bg-gray-800 border-r border-purple-200 dark:border-gray-700">
+        <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">
+          Useful Links
+        </h2>
+        <nav className="flex flex-col gap-2">
+          <a
+            href="https://www.trackaipac.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+          >
+            Track AIPAC
+          </a>
+        </nav>
+      </aside>
+
+      {/* Main Content */}
+      <main className="flex-1 flex flex-col items-center gap-8 p-8 max-w-5xl mx-auto w-full">
         <h1 className="text-5xl md:text-7xl font-bold text-purple-600 dark:text-purple-400 text-center">
           The Purple Revolution
         </h1>
