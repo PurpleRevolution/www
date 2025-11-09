@@ -1,25 +1,120 @@
-export default function Home() {
-  return (
-    <div className="flex min-h-screen bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800">
-      {/* Left Sidebar */}
-      <aside className="w-64 p-6 bg-purple-100 dark:bg-gray-800 border-r border-purple-200 dark:border-gray-700">
-        <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">
-          Useful Links
-        </h2>
-        <nav className="flex flex-col gap-2">
-          <a
-            href="https://www.trackaipac.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
-          >
-            Track AIPAC
-          </a>
-        </nav>
-      </aside>
+'use client';
 
-      {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center gap-8 p-8 max-w-5xl mx-auto w-full">
+import { useState } from 'react';
+
+export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800">
+      {/* Mobile Header with Menu Button */}
+      <div className="md:hidden sticky top-0 z-50 bg-purple-100 dark:bg-gray-800 border-b border-purple-200 dark:border-gray-700 px-4 py-3">
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="flex items-center gap-2 text-purple-600 dark:text-purple-400 font-semibold"
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            {isMenuOpen ? (
+              <path d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+          <span>Useful Links</span>
+        </button>
+
+        {/* Mobile Dropdown Menu */}
+        {isMenuOpen && (
+          <nav className="mt-4 flex flex-col gap-3 pb-2">
+            <a
+              href="https://www.trackaipac.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              Track AIPAC
+            </a>
+            <a
+              href="https://rumble.com/c/nickjfuentes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              American First
+            </a>
+            <a
+              href="https://www.youtube.com/@RealCandaceO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              Candace Owens
+            </a>
+            <a
+              href="https://www.youtube.com/@TuckerCarlson"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              Tucker Carlson
+            </a>
+          </nav>
+        )}
+      </div>
+
+      <div className="flex">
+        {/* Desktop Sidebar - Hidden on Mobile */}
+        <aside className="hidden md:block w-64 min-h-screen p-6 bg-purple-100 dark:bg-gray-800 border-r border-purple-200 dark:border-gray-700 sticky top-0 h-screen overflow-y-auto">
+          <h2 className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-4">
+            Useful Links
+          </h2>
+          <nav className="flex flex-col gap-2">
+            <a
+              href="https://www.trackaipac.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              Track AIPAC
+            </a>
+            <a
+              href="https://rumble.com/c/nickjfuentes"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              American First
+            </a>
+            <a
+              href="https://www.youtube.com/@RealCandaceO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              Candace Owens
+            </a>
+            <a
+              href="https://www.youtube.com/@TuckerCarlson"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              Tucker Carlson
+            </a>
+          </nav>
+        </aside>
+
+        {/* Main Content */}
+        <main className="flex-1 flex flex-col items-center gap-8 p-4 md:p-8 max-w-5xl mx-auto w-full">
         <h1 className="text-5xl md:text-7xl font-bold text-purple-600 dark:text-purple-400 text-center">
           The Purple Revolution
         </h1>
@@ -81,6 +176,7 @@ export default function Home() {
         </div>
 
       </main>
+      </div>
     </div>
   );
 }
