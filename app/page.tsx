@@ -67,6 +67,22 @@ export default function Home() {
             >
               Tucker Carlson
             </a>
+            <a
+              href="https://www.tiktok.com/@jamestalarico"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              James Talarico
+            </a>
+            <a
+              href="https://www.tiktok.com/@zohran_k_mamdani"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              Zohran Mamdani
+            </a>
           </nav>
         )}
       </div>
@@ -109,6 +125,22 @@ export default function Home() {
               className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
             >
               Tucker Carlson
+            </a>
+            <a
+              href="https://www.tiktok.com/@jamestalarico"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              James Talarico
+            </a>
+            <a
+              href="https://www.tiktok.com/@zohran_k_mamdani"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
+            >
+              Zohran Mamdani
             </a>
           </nav>
         </aside>
