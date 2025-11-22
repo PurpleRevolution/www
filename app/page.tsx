@@ -172,7 +172,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-purple-700 dark:text-purple-300 hover:text-purple-900 dark:hover:text-purple-100 hover:underline transition-colors"
             >
-              Jeffrey Gmai
+              Jeffrey Epstein Gmail
             </a>
           </nav>
         </aside>
